@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#ENV.update YAML.load_file('config/application_settings.yml')[Rails.env] rescue {}
+
+ENV.map{|e| p e}
+
+Admin.create!([  {email: ENV['MAIN_ADMIN'], password: "xxxxxxxx", password_confirmation: "xxxxxxxx"} ])

@@ -1,0 +1,6 @@
+<tr>
+  <td> <%= f.input :mandatory  %> </td>
+  <td> <%= f.input :name %> </td>
+  <td> <%= f.input :attribute_type_id, collection: AttributeType.all.map{|t| [t.name, t.id]}, selected: f.object.attribute_type_id %> </td>
+  <td> <%= link_to_remove_association 'eliminar', f, html_options = {}%> </td>
+</tr>

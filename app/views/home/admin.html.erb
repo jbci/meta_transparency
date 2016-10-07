@@ -1,0 +1,14 @@
+<h1>Home#admin</h1>
+<p>Find me in app/views/home/admin.html.erb</p>
+--> Platform Configuration<br>
+<% @config_models.each do |model| %>
+  <%= model %> <br>
+<% end %><br>
+--> User Managed<br>
+<% @user_models.each do |model| %>
+  <%= model %> <br>
+<% end %><br>
+--> All Model <br>
+<% @models.each do |model| %>
+  <%= link_to model, :controller => model.to_sym, :action => :index %> <br>
+<% end %><br>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @app_attribute.name %>
+</p>
+
+<p>
+  <strong>Mandatory:</strong>
+  <%= @app_attribute.mandatory %>
+</p>
+
+<p>
+  <strong>Default value:</strong>
+  <%= @app_attribute.default_value %>
+</p>
+
+<p>
+  <strong>Attribute type:</strong>
+  <%= @app_attribute.attribute_type %>
+</p>
+
+<%= link_to 'Edit', edit_app_attribute_path(@app_attribute) %> |
+<%= link_to 'Back', app_attributes_path %>

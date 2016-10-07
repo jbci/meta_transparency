@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @app_model.name %>
+</p>
+
+<p>
+  <strong>Plural:</strong>
+  <%= @app_model.plural %>
+</p>
+
+<p>
+  <strong>Main model:</strong>
+  <%= @app_model.main_model %>
+</p>
+
+<%= link_to 'Edit', edit_app_model_path(@app_model) %> |
+<%= link_to 'Back', app_models_path %>

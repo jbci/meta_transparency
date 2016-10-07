@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>App Attributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mandatory</th>
+      <th>Default value</th>
+      <th>Attribute type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @app_attributes.each do |app_attribute| %>
+      <tr>
+        <td><%= app_attribute.name %></td>
+        <td><%= app_attribute.mandatory %></td>
+        <td><%= app_attribute.default_value %></td>
+        <td><%= app_attribute.attribute_type %></td>
+        <td><%= link_to 'Show', app_attribute %></td>
+        <td><%= link_to 'Edit', edit_app_attribute_path(app_attribute) %></td>
+        <td><%= link_to 'Destroy', app_attribute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New App Attribute', new_app_attribute_path %>

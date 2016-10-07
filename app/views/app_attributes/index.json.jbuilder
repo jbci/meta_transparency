@@ -1,0 +1,1 @@
+json.array! @app_attributes, partial: 'app_attributes/app_attribute', as: :app_attribute

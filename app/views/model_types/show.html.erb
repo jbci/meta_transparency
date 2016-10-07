@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @model_type.name %>
+</p>
+
+<p>
+  <strong>Config model:</strong>
+  <%= @model_type.config_model %>
+</p>
+
+<%= link_to 'Edit', edit_model_type_path(@model_type) %> |
+<%= link_to 'Back', model_types_path %>

@@ -1,0 +1,1 @@
+json.partial! "app_attributes/app_attribute", app_attribute: @app_attribute

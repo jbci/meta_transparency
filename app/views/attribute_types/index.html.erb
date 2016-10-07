@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Attribute Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Attr type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attribute_types.each do |attribute_type| %>
+      <tr>
+        <td><%= attribute_type.name %></td>
+        <td><%= attribute_type.attr_type %></td>
+        <td><%= link_to 'Show', attribute_type %></td>
+        <td><%= link_to 'Edit', edit_attribute_type_path(attribute_type) %></td>
+        <td><%= link_to 'Destroy', attribute_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attribute Type', new_attribute_type_path %>

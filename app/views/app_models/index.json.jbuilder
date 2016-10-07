@@ -1,0 +1,1 @@
+json.array! @app_models, partial: 'app_models/app_model', as: :app_model
