@@ -61,4 +61,17 @@ Rails.application.configure do
     :user_name            => ENV['SMTP_SETTING_USERNAME'],
     :password             => ENV['SMTP_SETTING_PASSWORD'],
     :authentication       => :plain  }
+
+
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :erb
+      g.test_framework  :rspec, fixture: true
+      g.stylesheets     true
+      g.javascripts     true
+      g.steps           :step
+
+      # Add a fallback!
+      g.fallbacks[:rspec] = :test_unit
+    end
 end

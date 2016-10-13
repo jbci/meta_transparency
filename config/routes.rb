@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :rata
   get 'admins/index'
 
   get 'users/index'
